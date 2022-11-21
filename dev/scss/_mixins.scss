@@ -1,0 +1,17 @@
+@function rem($px) {
+    @return #{calc($px / 16)}rem;
+  }
+
+  // Center elements in a flex
+  @mixin flex-box($jc: center) {
+    display: flex;
+    justify-content: $jc;
+    align-items: center;
+  }
+
+  // Media Query Mixin
+  @mixin mq($w) {
+    @media (min-width: $w) {
+      @content;
+    }
+  }
