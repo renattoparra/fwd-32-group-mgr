@@ -1,15 +1,13 @@
-// Place your Sass imports here...
-@use 'reset';
-
-
-@use 'about';
-@use 'advisor-form';
-@use 'contact';
-@use 'footer';
-@use 'header';
-@use 'hero';
-@use 'products';
 @use "var";
-@use 'video';
-@use 'mixins';
-@use 'typography';
+@use "mixins";
+@use "reset";
+@use "typography";
+
+@use "header";
+@use "hero";
+@use "products";
+@use "advisor-form";
+@use "about";
+@use "video";
+@use "contact";
+@use "footer";
