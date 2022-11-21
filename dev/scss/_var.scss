@@ -1,17 +1,14 @@
-$brand-color-dark:#244a64;
-$brand-color-light:#429bd6;
+// Colors
+$brand-color-dark: #244a64;
+$brand-color-light: #429bd6;
 
-$text-color-dark:#504f4f;
-$text-color-light:white;
+$text-color-dark: #504f4f;
+$text-color-light: white;
 
+// Fonts
+$heading-font: "Roboto", sans-serif;
+$body-font: "Roboto Condensed", sans-serif;
 
-//Fonts
-$heading-font: 'Roboto', sans-serif;;
-$body-font:'Roboto Condensed', sans-serif;
-
-
-
-
-
-
-
+// Media Query Breakpoints
+$desktopMedium: em(1250);
+$tabletPortrait: em(850);
