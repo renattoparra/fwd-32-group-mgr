@@ -1,0 +1,17 @@
+// Typography Styles
+@use "var" as *;
+
+body {
+    font-family: $body-font;
+}
+
+h1,
+h2,
+h3,
+nav a {
+    font-family: $heading-font;
+}
+
+a {
+    text-decoration: none;
+}

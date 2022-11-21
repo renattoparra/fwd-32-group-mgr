@@ -1,4 +1,6 @@
 // Place your Sass imports here...
+@use 'reset';
+
 
 @use 'about';
 @use 'advisor-form';
@@ -10,3 +12,4 @@
 @use "var";
 @use 'video';
 @use 'mixins';
+@use 'typography';
