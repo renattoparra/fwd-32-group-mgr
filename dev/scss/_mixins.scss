@@ -1,17 +1,27 @@
+// Function to
+// Convert Px to Ems
+@function em($px, $bc: 16) {
+  @return #{calc($px / $bc)}em;
+}
+
 @function rem($px) {
-    @return #{calc($px / 16)}rem;
-  }
+  @return #{calc($px / 16)}rem;
+}
 
-  // Center elements in a flex
-  @mixin flex-box($jc: center) {
-    display: flex;
-    justify-content: $jc;
-    align-items: center;
-  }
+@function border($bc: #ccc) {
+  @return 1px solid #{$bc};
+}
 
-  // Media Query Mixin
-  @mixin mq($w) {
-    @media (min-width: $w) {
-      @content;
-    }
+// Center elements in a flex
+@mixin flex-box($jc: center) {
+  display: flex;
+  justify-content: $jc;
+  align-items: center;
+}
+
+// Media Query Mixin
+@mixin mq($w) {
+  @media (min-width: $w) {
+    @content;
   }
+}

@@ -1,8 +1,10 @@
 // Typography Styles
 @use "var" as *;
+@use "mixins" as *;
 
 body {
     font-family: $body-font;
+    color: $text-color-dark;
 }
 
 h1,
@@ -12,6 +14,22 @@ nav a {
     font-family: $heading-font;
 }
 
+h2 {
+    font-size: rem(24);
+}
+
+.heading {
+    font-family: $heading-font;
+    font-weight: bold;
+    font-size: rem(24);
+}
+
 a {
     text-decoration: none;
+}
+
+@include mq($tabletPortrait) {
+    .mobile-br {
+        display: none;
+    }
 }

@@ -1,3 +1,5 @@
+@use "mixins" as *;
+
 // Colors
 $brand-color-dark: #244a64;
 $brand-color-light: #429bd6;
@@ -8,6 +10,9 @@ $text-color-light: white;
 // Fonts
 $heading-font: "Roboto Condensed", sans-serif;
 $body-font: "Roboto", sans-serif;
+
+// Padding
+$padding-side: rem(10);
 
 // Media Query Breakpoints
 $desktopMedium: em(1250);
