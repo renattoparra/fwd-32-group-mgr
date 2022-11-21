@@ -1,0 +1,36 @@
+// Resets
+@use "mixins" as *;
+
+// Box Sizing Reset
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+// Image Reset
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+// Button Reset
+button.hamburger-menu {
+  background-color: transparent;
+  border: 0;
+}
+
+// Remove Padding, Margins
+body,
+h1,
+h2,
+h3,
+p,
+nav a {
+  @include flatten;
+}
