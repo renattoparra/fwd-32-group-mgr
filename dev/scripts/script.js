@@ -1,30 +1,25 @@
-// Write your JavaScript here...
-
-$(document).ready(function () {
-  background(1);
-
-  $(".hero").click(function () {
-    $('#hamburger-1').removeClass("is-active");
-    $('.drop-down-menu').removeClass("is-active")
-  });
-
-  $("#hamburger-1").click(function () {
-    $(this).toggleClass("is-active");
-    $('.drop-down-menu').toggleClass("is-active")
-  });
-
-  $(".c").click(function () {
-    let clas = $(this).attr('class');
-    console.log(clas);
-    let number;
-    if (clas === "c c1") { number = 1 }
-    else if (clas === "c c2") { number = 2 }
-    else if (clas === "c c3") { number = 3 }
-    $('.hero').css("background-image", `url(../images/header-slider-img-0${number}.jpg)`)
-    // $(this).
-  })
+$(".hero").click(function () {
+  $('#hamburger-1').removeClass("is-active");
+  $('.drop-down-menu').removeClass("is-active")
 });
 
+$("#hamburger-1").click(function () {
+  $(this).toggleClass("is-active");
+  $('.drop-down-menu').toggleClass("is-active")
+});
+
+$(".c").click(function () {
+  let clas = $(this).attr('class');
+  console.log(clas);
+  let number;
+  if (clas === "c c1") { number = 1 }
+  else if (clas === "c c2") { number = 2 }
+  else if (clas === "c c3") { number = 3 }
+  $('.hero').css("background-image", `url(../images/header-slider-img-0${number}.jpg)`)
+  // $(this).
+});
+
+background(1);
 
 function background(x) {
   setInterval(() => {
