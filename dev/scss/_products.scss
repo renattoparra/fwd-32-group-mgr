@@ -8,18 +8,29 @@
 
   h2 {
     color: $text-color-dark;
-    margin-bottom: rem(10);
+    margin-bottom: rem(12);
   }
 
   h2,
   p {
     text-align: center;
+    @include margin-center;
+  }
+
+  @include mq($tabletPortrait) {
+    h2 {
+      color: $brand-color-dark;
+    }
+
+    p {
+      max-width: rem(700);
+    }
   }
 }
 
 .products-list {
-  margin: rem(24) auto;
   list-style: none;
+  margin: rem(24) auto;
 
   li {
     width: 100%;
@@ -44,7 +55,38 @@
   .product-name {
     grid-column: 2 / 3;
     font-size: rem(22);
+    color: $text-color-dark;
     text-transform: uppercase;
     margin: auto 0;
+  }
+
+  @include mq($tabletPortrait) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: rem(5);
+
+    li {
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr rem(60) auto;
+      text-align: center;
+      border-bottom: 0;
+    }
+
+    img {
+      grid-column: 1 / 2;
+      grid-row: 1 / 2;
+    }
+
+    .product-name {
+      grid-column: 1 / 2;
+      grid-row: 2 / 3;
+      color: $brand-color-light;
+      margin: 0 auto;
+    }
+
+    a.mobile-hide {
+      grid-row: 3 / 4;
+    }
   }
 }

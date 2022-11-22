@@ -2,8 +2,12 @@
 @use "var" as *;
 @use "mixins" as *;
 
-body {
+body,
+main a {
     font-family: $body-font;
+}
+
+main a {
     color: $text-color-dark;
 }
 
@@ -20,16 +24,25 @@ h2 {
 
 .heading {
     font-family: $heading-font;
-    font-weight: bold;
     font-size: rem(24);
+    font-weight: bold;
 }
 
-a {
-    text-decoration: none;
+.mobile-hide {
+    display: none;
 }
 
 @include mq($tabletPortrait) {
-    .mobile-br {
+    h2,
+    .heading {
+        font-size: rem(28);
+    }
+
+    .mobile-show {
         display: none;
+    }
+
+    .mobile-hide {
+        display: block;
     }
 }

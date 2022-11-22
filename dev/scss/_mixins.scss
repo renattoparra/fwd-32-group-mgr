@@ -19,6 +19,14 @@
   align-items: center;
 }
 
+// Mixin for centering element
+@mixin margin-center {
+  margin: {
+    left: auto;
+    right: auto;
+  }
+}
+
 // Media Query Mixin
 @mixin mq($w) {
   @media (min-width: $w) {
