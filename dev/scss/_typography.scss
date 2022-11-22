@@ -19,10 +19,13 @@ nav a {
 }
 
 h2 {
+    text-transform: uppercase;
     font-size: rem(24);
+    font-weight: bold;
 }
 
 .heading {
+    text-transform: uppercase;
     font-family: $heading-font;
     font-size: rem(24);
     font-weight: bold;
