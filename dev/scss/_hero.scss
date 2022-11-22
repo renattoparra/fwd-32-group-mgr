@@ -1,91 +1,85 @@
-@use 'var' as*;
-@use 'mixins' as*;
+@use "var" as *;
+@use "mixins" as *;
 
-.hero{
-    background-image: url(../images/header-slider-img-01.jpg);
-    text-transform: uppercase;
-    background-color: white;
-    transition: background-image 2s;
-    background-color: #cccccc; 
-        // height: 80vh; 
-        background-position: center; 
-        background-repeat: no-repeat; 
-        background-size: cover;
-    
-    
-    h1{
-        // position:relative;
-        // z-index:1;
-        // top:10rem;
-        
-        color:$text-color-light;
-        font-family: $heading-font;
-        text-align: center;
-        
-        font-weight: bold;
-        margin: 0 auto;
-        padding-top:10rem;
-    }
+.hero {
+  background-image: url(../images/header-slider-img-01.jpg);
+  text-transform: uppercase;
+  background-color: white;
+  transition: background-image 2s;
+  background-color: #cccccc;
+  // height: 80vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 
-  
+  h1 {
+    // position:relative;
+    // z-index:1;
+    // top:10rem;
 
-   button {
+    color: $text-color-light;
+    font-family: $heading-font;
+    text-align: center;
+
+    font-weight: bold;
+    margin: 0 auto;
+    padding-top: 10rem;
+  }
+
+  button {
     text-transform: uppercase;
     font-family: $body-font;
     background-color: transparent;
-    border:1px solid white;
-    color:$text-color-light;
-    padding:.5rem 1rem;
-   }
+    border: 1px solid white;
+    color: $text-color-light;
+    padding: 0.5rem 1rem;
+  }
 
-   .hero-buttons{
+  .hero-buttons {
     @include flex-box();
     flex-direction: column;
-    padding-bottom:8rem;
+    padding-bottom: 8rem;
     padding-top: 4rem;
-   }
+  }
 
-   .view-products{
-    margin:2rem;
-   }
+  .view-products {
+    margin: 2rem;
+  }
 
-  .white-wave{
+  .white-wave {
     display: block;
-    
-    object-fit:cover;
-    
+
+    object-fit: cover;
+
     transform: scale(1.3, 2.9);
     // height:100%;
     // max-width:100%;
     object-position: 50% top;
-        
   }
 
-  .slideshow-dot{
-    display:flex;
+  .slideshow-dot {
+    display: flex;
     flex-direction: row;
     justify-content: center;
     position: absolute;
     top: 33rem;
-    left:0;
-    right:0;
+    left: 0;
+    right: 0;
   }
 
-  .c{
-    width:10px;
-    height:10px;
+  .c {
+    width: 10px;
+    height: 10px;
     transition: background-color 1s;
-    padding:.5rem;
-    text-align:center;
-    line-height:10px;
-    margin:.5rem;
-    border-radius:50%;
-    background:white;
-    
-    }
+    padding: 0.5rem;
+    text-align: center;
+    line-height: 10px;
+    margin: 0.5rem;
+    border-radius: 50%;
+    background: white;
+  }
 
-    .c.c1{
-        background: $brand-color-light;
-    }
-
+  .c.c1 {
+    background: $brand-color-light;
+  }
 }
