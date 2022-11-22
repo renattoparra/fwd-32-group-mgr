@@ -56,7 +56,6 @@
     grid-column: 2 / 3;
     font-size: rem(22);
     color: $text-color-dark;
-    text-transform: uppercase;
     margin: auto 0;
   }
 
@@ -76,13 +75,15 @@
     img {
       grid-column: 1 / 2;
       grid-row: 1 / 2;
+      @include margin-center;
     }
 
     .product-name {
       grid-column: 1 / 2;
       grid-row: 2 / 3;
       color: $brand-color-light;
-      margin: 0 auto;
+      margin-top: 0;
+      @include margin-center;
     }
 
     a.mobile-hide {
