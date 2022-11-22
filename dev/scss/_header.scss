@@ -1,0 +1,62 @@
+@use 'mixins' as *;
+
+header{
+    position: absolute;
+    top:0;
+    right:0;
+    left:0;
+
+   .mobile-wrapper{
+    background-color: black;
+    opacity: .9;
+    @include flex-box;
+    justify-content: space-between;
+    
+   }
+    
+    .logo{
+        width:4rem;
+        padding-top:.5rem;
+        padding-bottom:.5rem;
+    }
+
+    .drop-down-menu{
+        display: none;
+
+        ul{
+            text-decoration: none;
+            list-style-type: none;
+            padding-left:0
+        }
+
+        a{
+            color:white;
+        }
+    }
+
+    .btn-group{
+        display:none;
+
+    }
+
+    #hamburger-1 .line{
+        width: 30px;
+        height: 3px;
+        background-color: #ecf0f1;
+        display: block;
+        margin: 5px;
+        -webkit-transition: all 0.3s ease-in-out;
+        -o-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
+    }
+
+    #hamburger-1 {
+        width:35px;
+        margin:.7rem;
+        
+    }
+
+   .three.col{
+        width:35px;
+   }
+}
