@@ -48,7 +48,7 @@ function background(x){
             // if(index==(x-1))item.style.background='blue';
 
             const color = index === x ? '#429bd6':"white";
-            item.style.background = `${color}`;
+            item.style.background = color;
         })
 
 
