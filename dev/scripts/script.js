@@ -28,10 +28,7 @@ $(document).ready(function(){
     
   });
 
-  $(document).ready(function(){
-    
-    
-  });
+
 
 
 function background(x){
