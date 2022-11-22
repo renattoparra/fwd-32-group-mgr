@@ -8,8 +8,8 @@
   @return #{calc($px / 16)}rem;
 }
 
-@function border($bc: #ccc) {
-  @return 1px solid #{$bc};
+@function solid-border($px: 1, $bc: #ccc) {
+  @return #{$px}px solid #{$bc};
 }
 
 // Center elements in a flex
