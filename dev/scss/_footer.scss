@@ -2,10 +2,12 @@
 @use "mixins" as *;
 
 .site-footer {
-  @include margin-center;
-  @include flex-box;
   position: relative;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: repeat(3, auto);
+  gap: rem(24);
+  text-align: center;
   background-color: $brand-color-light;
   padding: rem(28) 0 rem(48);
 
@@ -21,8 +23,8 @@
     z-index: 2;
 
     .logo {
+      @include margin-center;
       width: rem(130);
-      margin-bottom: rem(32);
     }
   }
 
@@ -38,12 +40,17 @@
     width: 100%;
     height: 100px;
   }
+
+  @include mq($tabletPortrait) {
+    &::before {
+      background-size: contain;
+    }
+  }
 }
 
 .footer-info {
   @include flex-box;
   gap: rem(8);
-  margin-bottom: rem(12);
 
   .social-item {
     img {
