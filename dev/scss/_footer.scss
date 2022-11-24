@@ -19,28 +19,12 @@
     color: $text-color-light;
     text-transform: uppercase;
     text-decoration: none;
-  }
-
-  .logo {
     z-index: 2;
-
-    img {
-      @include margin-center;
-      width: rem(130);
-    }
   }
 
-  &::before {
-    content: "";
-    position: absolute;
-    top: -#{rem(60)};
-    left: 0;
-    right: 0;
-    background-color: $brand-color-light;
-    background: url("../images/wave-blue-light.png") 60% center no-repeat;
-    background-size: cover;
-    width: 100%;
-    height: 100px;
+  .logo img {
+    @include margin-center;
+    width: rem(130);
   }
 }
 
@@ -57,11 +41,10 @@
 .footer-info {
   @include flex-box;
   gap: rem(8);
+  z-index: 2;
 
-  .social-item {
-    img {
-      width: rem(30);
-    }
+  .social-item img {
+    width: rem(30);
   }
 
 
@@ -77,10 +60,6 @@
     grid-template-rows: auto;
     gap: rem(10) rem(32);
     padding-bottom: rem(30);
-
-    &::before {
-      background-size: contain;
-    }
   }
 
   .logo {
@@ -98,14 +77,19 @@
   .site-footer {
     grid-template-columns: 0.5fr auto auto;
     gap: rem(24);
-  }
 
-  .logo {
-    grid-row: 1;
+    .logo {
+      grid-row: 1 / 2;
+
+      img {
+        width: rem(150);
+        margin-left: 0;
+      }
+    }
   }
 
   .copyright {
     grid-column: 3 / 4;
-    grid-row: 1;
+    grid-row: 1 / 2;
   }
 }

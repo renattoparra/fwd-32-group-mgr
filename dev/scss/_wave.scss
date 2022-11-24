@@ -1,0 +1,25 @@
+@use "var" as *;
+@use "mixins" as *;
+
+.wave::before {
+  content: "";
+  position: absolute;
+  top: -#{rem(60)};
+  left: 0;
+  right: 0;
+  background-color: $brand-color-light;
+  background: url("../images/wave-blue-light.png") 60% center no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100px;
+
+  @include mq($tabletPortrait) {
+    height: 110px;
+    background-size: cover;
+  }
+  @include mq($desktopMedium) {
+    height: 160px;
+    top: -#{rem(90)};
+    background-size: cover;
+  }
+}
