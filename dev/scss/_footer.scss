@@ -7,22 +7,24 @@
   grid-template-columns: auto;
   grid-template-rows: repeat(3, auto);
   gap: rem(24);
+  justify-content: center;
+  align-items: center;
   text-align: center;
   background-color: $brand-color-light;
   padding: rem(28) 0 rem(48);
 
   a,
-  p {
+  .copyright {
     font-size: rem(13);
     color: $text-color-light;
     text-transform: uppercase;
     text-decoration: none;
   }
 
-  a:first-child {
+  .logo {
     z-index: 2;
 
-    .logo {
+    img {
       @include margin-center;
       width: rem(130);
     }
@@ -39,12 +41,6 @@
     background-size: cover;
     width: 100%;
     height: 100px;
-  }
-
-  @include mq($tabletPortrait) {
-    &::before {
-      background-size: contain;
-    }
   }
 }
 
@@ -70,5 +66,28 @@
 
   .social-item + .contact-item {
     margin: 0 rem(10);
+  }
+}
+
+@include mq($tabletPortrait) {
+  .site-footer {
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: auto;
+    gap: rem(10) rem(32);
+    padding-bottom: rem(30);
+
+    &::before {
+      background-size: contain;
+    }
+  }
+
+  .logo {
+    grid-column: 1 / 2;
+    grid-row: 1 / 3;
+  }
+
+  .copyright {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
   }
 }
