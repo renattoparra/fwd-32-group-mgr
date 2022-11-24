@@ -1,0 +1,67 @@
+@use "var" as *;
+@use "mixins" as *;
+
+.site-footer {
+  @include margin-center;
+  @include flex-box;
+  position: relative;
+  flex-direction: column;
+  background-color: $brand-color-light;
+  padding: rem(28) 0 rem(48);
+
+  a,
+  p {
+    font-size: rem(13);
+    color: $text-color-light;
+    text-transform: uppercase;
+    text-decoration: none;
+  }
+
+  a:first-child {
+    z-index: 2;
+
+    .logo {
+      width: rem(130);
+      margin-bottom: rem(32);
+    }
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -#{rem(60)};
+    left: 0;
+    right: 0;
+    background-color: $brand-color-light;
+    background: url("../images/wave-blue-light.png") 60% center no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100px;
+  }
+}
+
+.footer-info {
+  @include flex-box;
+  gap: rem(8);
+  margin-bottom: rem(12);
+
+  .social-item {
+    img {
+      width: rem(30);
+    }
+  }
+
+  .contact-item {
+    @include flex-box;
+
+    img {
+      width: rem(20);
+      height: rem(20);
+      margin-right: rem(4);
+    }
+  }
+
+  .social-item + .contact-item {
+    margin: 0 rem(10);
+  }
+}
