@@ -91,3 +91,19 @@
     grid-row: 2 / 3;
   }
 }
+
+@include mq($desktopMedium) {
+  .site-footer {
+    grid-template-columns: 0.5fr auto auto;
+    gap: rem(24);
+  }
+
+  .logo {
+    grid-row: 1;
+  }
+
+  .copyright {
+    grid-column: 3 / 4;
+    grid-row: 1;
+  }
+}
