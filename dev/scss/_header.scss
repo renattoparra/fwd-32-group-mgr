@@ -41,8 +41,9 @@ header {
         }
 
         li {
-            width: 100%;
+
             padding: 0.4rem;
+
         }
 
         a {
@@ -50,12 +51,11 @@ header {
             color: white;
             text-decoration: none;
             font-family: $heading-font;
+
         }
     }
 
-    .btn-group {
-        display: none;
-    }
+
 
     .is-active ul {
         height: 18.5rem;
@@ -71,7 +71,6 @@ header {
         -o-transition: all 0.3s ease-in-out;
         transition: all 0.3s ease-in-out;
         margin-right: 1rem;
-
     }
 
     li:hover {
@@ -81,25 +80,39 @@ header {
     @include mq($tabletPortrait) {
         .mobile-wrapper {
             background-color: transparent;
+            display: block;
 
         }
 
-        .btn-group {
+
+        #desktop-header {
+
+            height: 1rem;
             display: flex;
-            width: 66%;
+            justify-content: space-between;
+            width: 80%;
             margin: 0 auto;
 
-        }
 
-        ul {
-            background-color: transparent;
-            justify-content: space-between;
-            height: 22rem;
-        }
+            ul {
 
-        li {
-            text-transform: uppercase;
-            background-color: transparent;
+                list-style-type: none;
+                padding: $padding-side;
+                gap: 1rem;
+                display: flex;
+                background-color: transparent;
+            }
+
+            li {
+                text-transform: uppercase;
+                background-color: transparent;
+                padding-top: $padding-side;
+            }
+
+            a {
+                color: white;
+                text-decoration: none;
+            }
         }
 
         .logo {
@@ -107,7 +120,7 @@ header {
             margin: 0 auto;
             height: 10rem;
             width: 14rem;
-            margin-top: 1rem;
+            margin-top: 0rem;
         }
     }
 

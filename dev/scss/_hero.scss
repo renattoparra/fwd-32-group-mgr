@@ -7,7 +7,7 @@
   background-color: white;
   transition: background-image 2s;
   background-color: #cccccc;
-  // height: 80vh;
+
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -20,7 +20,7 @@
     color: $text-color-light;
     font-family: $heading-font;
     text-align: center;
-
+    width: 69%;
     font-weight: bold;
     margin: 0 auto;
     padding-top: 10rem;
@@ -35,16 +35,19 @@
     padding: 0.5rem 1rem;
   }
 
+  .btn-group {
+    display: none;
+  }
+
   .hero-buttons {
     @include flex-box();
     flex-direction: column;
-    padding-bottom: 8rem;
+    padding-bottom: 7rem;
     padding-top: 4rem;
+    gap: 1rem;
   }
 
-  .view-products {
-    margin: 2rem;
-  }
+
 
   .white-wave {
     display: block;
@@ -61,10 +64,12 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
-    position: absolute;
-    top: 33rem;
+    // position: absolute;
+    // top: 33rem;
     left: 0;
     right: 0;
+    padding-bottom: 7rem;
+    padding-top: 4rem;
   }
 
   .c {
@@ -81,5 +86,36 @@
 
   .c.c1 {
     background: $brand-color-light;
+  }
+
+  @include mq($tabletPortrait) {
+    h1 {
+
+      padding: 5rem $padding-side;
+      width: 70%;
+      margin: 0 auto;
+    }
+
+    .btn-group {
+      padding-top: 10rem;
+      display: flex;
+      width: 81%;
+      margin: 0 auto;
+
+      button {
+        background-color: rgba($color: #555555, $alpha: 0.7);
+        border: 0px solid rgba($color: #555555, $alpha: 0.7);
+        border-radius: 0;
+        padding: 0\.5rem;
+      }
+
+    }
+
+    .hero-buttons {
+      height: 3rem;
+      flex-direction: row;
+      gap: 1.5rem;
+      padding: 0;
+    }
   }
 }

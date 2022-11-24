@@ -44,6 +44,16 @@
   }
 }
 
+.contact-item {
+  @include flex-box;
+
+  img {
+    width: rem(20);
+    height: rem(20);
+    margin-right: rem(4);
+  }
+}
+
 .footer-info {
   @include flex-box;
   gap: rem(8);
@@ -54,17 +64,9 @@
     }
   }
 
-  .contact-item {
-    @include flex-box;
 
-    img {
-      width: rem(20);
-      height: rem(20);
-      margin-right: rem(4);
-    }
-  }
 
-  .social-item + .contact-item {
+  .social-item+.contact-item {
     margin: 0 rem(10);
   }
 }
