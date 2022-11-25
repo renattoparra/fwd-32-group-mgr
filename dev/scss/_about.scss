@@ -4,7 +4,8 @@
 .about {
   color: $text-color-light;
   text-align: center;
-  background: url("../images/bg-section-about-us.jpg") center center $brand-color-dark;
+  background: url("../images/bg-section-about-us.jpg") center center $brand-color-dark no-repeat;
+  background-size: cover;
   padding: rem(100) $padding-side rem(60);
 
   h2 {

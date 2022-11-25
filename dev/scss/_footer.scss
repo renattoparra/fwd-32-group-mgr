@@ -28,6 +28,20 @@
   }
 }
 
+.footer-info {
+  @include flex-box;
+  gap: rem(6);
+  z-index: 2;
+
+  .social-item img {
+    width: rem(30);
+  }
+
+  .social-item + .contact-item {
+    margin: 0 rem(6);
+  }
+}
+
 .contact-item {
   @include flex-box;
 
@@ -35,22 +49,6 @@
     width: rem(20);
     height: rem(20);
     margin-right: rem(4);
-  }
-}
-
-.footer-info {
-  @include flex-box;
-  gap: rem(8);
-  z-index: 2;
-
-  .social-item img {
-    width: rem(30);
-  }
-
-
-
-  .social-item+.contact-item {
-    margin: 0 rem(10);
   }
 }
 
