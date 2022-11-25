@@ -33,7 +33,7 @@
   list-style: none;
   margin: rem(24) auto;
 
-  li {
+  li > a {
     width: 100%;
     display: grid;
     grid-template-columns: 40% 40%;
@@ -43,6 +43,7 @@
     margin: rem(10) 0;
     padding-bottom: rem(14);
     border-bottom: border();
+    text-decoration: none;
 
     &:last-child {
       border: 0;
@@ -66,7 +67,7 @@
     justify-content: center;
     gap: rem(5);
 
-    li {
+    li > a {
       grid-template-columns: 1fr;
       grid-template-rows: 1fr rem(60) auto;
       text-align: center;
@@ -87,8 +88,9 @@
       @include margin-center;
     }
 
-    a.mobile-hide {
+    .mobile-hide {
       grid-row: 3 / 4;
+      text-decoration: underline;
     }
   }
 }
