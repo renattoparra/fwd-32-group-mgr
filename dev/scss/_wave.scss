@@ -19,7 +19,7 @@
     background-size: contain;
   }
 
-  @include mq($desktopLarge) {
+  @include mq($desktopMedium) {
     top: -#{rem(70)};
     height: rem(130);
     background-size: cover;
