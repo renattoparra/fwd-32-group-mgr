@@ -2,36 +2,12 @@
 @use "mixins" as *;
 
 .wave {
-  &::before {
-    content: "";
-    position: absolute;
-    top: -#{rem(60)};
-    left: 0;
-    right: 0;
-    background-position: 60% center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    width: 100%;
-    height: rem(100);
-
-    @include mq($tabletPortrait) {
-      height: rem(100);
-      background-size: contain;
-    }
-
-    @include mq($desktopMedium) {
-      top: -#{rem(100)};
-      height: rem(180);
-    }
-  }
-
   &-products {
     background-color: $text-color-light;
     z-index: 1;
 
     &::before {
-      background-image: url("../images/wave-white.png");
-      z-index: -1;
+      @include wave("../images/wave-white.png");
     }
   }
 
@@ -40,8 +16,7 @@
     z-index: 1;
 
     &::before {
-      background-image: url("../images/wave-blue-dark.png");
-      z-index: -1;
+      @include wave("../images/wave-blue-dark.png");
     }
   }
 
@@ -50,8 +25,31 @@
     z-index: 1;
 
     &::before {
-      background-image: url("../images/wave-blue-light.png");
-      z-index: -1;
+      @include wave("../images/wave-blue-light.png");
     }
+  }
+}
+
+@mixin wave($bgUrl) {
+  content: "";
+  position: absolute;
+  top: -#{rem(60)};
+  left: 0;
+  right: 0;
+  background-image: url(#{$bgUrl});
+  background-position: center center;
+  background-size: 200% 100%;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: rem(100);
+  z-index: -1;
+
+  @include mq($tabletPortrait) {
+    background-size: contain;
+  }
+
+  @include mq($desktopMedium) {
+    top: -#{rem(100)};
+    height: rem(180);
   }
 }
