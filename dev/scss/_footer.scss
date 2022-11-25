@@ -19,7 +19,6 @@
     color: $text-color-light;
     text-transform: uppercase;
     text-decoration: none;
-    z-index: 2;
   }
 
   .logo img {
@@ -31,7 +30,6 @@
 .footer-info {
   @include flex-box;
   gap: rem(6);
-  z-index: 2;
 
   .social-item img {
     width: rem(30);

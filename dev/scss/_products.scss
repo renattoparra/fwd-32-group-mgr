@@ -3,8 +3,9 @@
 @use "mixins" as *;
 
 .products {
+  position: relative;
   width: 100%;
-  padding: 0 $padding-side;
+  padding: rem(24) $padding-side;
 
   h2 {
     color: $text-color-dark;

@@ -5,30 +5,53 @@
   &::before {
     content: "";
     position: absolute;
-
+    top: -#{rem(60)};
     left: 0;
     right: 0;
+    background-position: 60% center;
     background-size: cover;
+    background-repeat: no-repeat;
     width: 100%;
-    height: 100px;
-  }
-
-  &-products::before {
-  }
-
-  &-footer::before {
-    top: -#{rem(60)};
-    background-color: $brand-color-light;
-    background: url("../images/wave-blue-light.png") 60% center no-repeat;
+    height: rem(100);
 
     @include mq($tabletPortrait) {
-      height: 110px;
-      background-size: cover;
+      height: rem(100);
+      background-size: contain;
     }
 
     @include mq($desktopMedium) {
-      height: 160px;
-      top: -#{rem(90)};
+      top: -#{rem(100)};
+      height: rem(180);
+    }
+  }
+
+  &-products {
+    background-color: $text-color-light;
+    z-index: 1;
+
+    &::before {
+      background-image: url("../images/wave-white.png");
+      z-index: -1;
+    }
+  }
+
+  &-form {
+    background-color: $brand-color-dark;
+    z-index: 1;
+
+    &::before {
+      background-image: url("../images/wave-blue-dark.png");
+      z-index: -1;
+    }
+  }
+
+  &-footer {
+    background-color: $brand-color-light;
+    z-index: 1;
+
+    &::before {
+      background-image: url("../images/wave-blue-light.png");
+      z-index: -1;
     }
   }
 }
