@@ -47,8 +47,6 @@
     gap: 1rem;
   }
 
-
-
   .white-wave {
     display: block;
 
@@ -90,7 +88,6 @@
 
   @include mq($tabletPortrait) {
     h1 {
-
       padding: 5rem $padding-side;
       width: 70%;
       margin: 0 auto;
@@ -108,7 +105,6 @@
         border-radius: 0;
         padding: .5rem;
       }
-
     }
 
     .hero-buttons {

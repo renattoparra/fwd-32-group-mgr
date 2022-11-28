@@ -3,15 +3,18 @@
 
 .site-footer {
   position: relative;
+  background-color: $brand-color-light;
+  padding: rem(10) $padding-side rem(28);
+}
+
+.footer-wrapper {
+  @include margin-center;
+  max-width: rem(300);
   display: grid;
   grid-template-columns: auto;
   grid-template-rows: repeat(3, auto);
-  gap: rem(24);
-  justify-content: center;
-  align-items: center;
+  gap: rem(12);
   text-align: center;
-  background-color: $brand-color-light;
-  padding: rem(28) 0 rem(48);
 
   a,
   .copyright {
@@ -21,26 +24,30 @@
     text-decoration: none;
   }
 
-  .logo {
-    z-index: 2;
+  .logo img {
+    @include margin-center;
+    width: rem(130);
+    margin-bottom: rem(14);
+  }
+}
 
-    img {
-      @include margin-center;
-      width: rem(130);
-    }
+.social-icons {
+  @include flex-box($jc: space-between);
+  gap: rem(5);
+
+  & > div {
+    @include flex-box($jc: space-between);
+    gap: rem(5);
+  }
+}
+
+.social-item {
+  img {
+    width: rem(26);
   }
 
-  &::before {
-    content: "";
-    position: absolute;
-    top: -#{rem(60)};
-    left: 0;
-    right: 0;
-    background-color: $brand-color-light;
-    background: url("../images/wave-blue-light.png") 60% center no-repeat;
-    background-size: cover;
-    width: 100%;
-    height: 100px;
+  & + .contact-item {
+    margin: 0 rem(6);
   }
 }
 
@@ -48,44 +55,39 @@
   @include flex-box;
 
   img {
-    width: rem(20);
-    height: rem(20);
+    width: rem(16);
+    height: rem(16);
     margin-right: rem(4);
   }
 }
 
-.footer-info {
-  @include flex-box;
-  gap: rem(8);
-
-  .social-item {
-    img {
-      width: rem(30);
-    }
-  }
-
-
-
-  .social-item+.contact-item {
-    margin: 0 rem(10);
-  }
-}
-
 @include mq($tabletPortrait) {
-  .site-footer {
+  .footer-wrapper {
+    max-width: rem(600);
     grid-template-columns: repeat(2, auto);
     grid-template-rows: auto;
-    gap: rem(10) rem(32);
-    padding-bottom: rem(30);
+    justify-content: space-between;
+    align-items: end;
+    gap: rem(10);
 
-    &::before {
-      background-size: contain;
+    .logo {
+      grid-column: 1 / 2;
+      grid-row: 1 / 2;
+
+      img {
+        margin: 0;
+      }
     }
   }
 
-  .logo {
-    grid-column: 1 / 2;
-    grid-row: 1 / 3;
+  .social-icons {
+    gap: rem(36);
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+
+    & > div {
+      gap: rem(10);
+    }
   }
 
   .copyright {
@@ -95,17 +97,28 @@
 }
 
 @include mq($desktopMedium) {
-  .site-footer {
-    grid-template-columns: 0.5fr auto auto;
+  .footer-wrapper {
+    max-width: rem(900);
+    grid-template-columns: 1fr auto auto;
+    align-items: end;
     gap: rem(24);
+
+    .logo {
+      grid-row: 1 / 2;
+
+      img {
+        width: rem(150);
+      }
+    }
   }
 
-  .logo {
-    grid-row: 1;
+  .social-icons {
+    gap: rem(24);
   }
 
   .copyright {
     grid-column: 3 / 4;
-    grid-row: 1;
+    grid-row: 1 / 2;
+    line-height: rem(24);
   }
 }

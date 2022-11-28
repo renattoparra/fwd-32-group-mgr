@@ -1,0 +1,56 @@
+@use "var" as *;
+@use "mixins" as *;
+
+@mixin wave($bgUrl) {
+  content: "";
+  position: absolute;
+  top: -#{rem(60)};
+  left: 0;
+  right: 0;
+  background-image: url(#{$bgUrl});
+  background-position: center center;
+  background-size: 200% 100%;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: rem(100);
+  z-index: -1;
+
+  @include mq($tabletPortrait) {
+    background-size: contain;
+  }
+
+  @include mq($desktopMedium) {
+    top: -#{rem(80)};
+    height: rem(150);
+    background-size: cover;
+  }
+}
+
+.wave {
+  &-products {
+    background-color: $text-color-light;
+    z-index: 1;
+
+    &::before {
+      @include wave("../images/wave-white.png");
+    }
+  }
+
+  &-form {
+    background-color: $brand-color-dark;
+    z-index: 1;
+
+    &::before {
+      @include wave("../images/wave-blue-dark.png");
+    }
+  }
+
+  &-footer {
+    background-color: $brand-color-light;
+    z-index: 1;
+
+    &::before {
+      @include wave("../images/wave-blue-light.png");
+    }
+  }
+}
