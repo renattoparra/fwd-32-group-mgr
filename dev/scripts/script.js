@@ -1,60 +1,41 @@
-// Write your JavaScript here...
+$(".hero").click(function () {
+  $('#hamburger-1').removeClass("is-active");
+  $('.drop-down-menu').removeClass("is-active")
+});
 
-$(document).ready(function(){
-   
-    let x=1
-    background(x);
+$("#hamburger-1").click(function () {
+  $(this).toggleClass("is-active");
+  $('.drop-down-menu').toggleClass("is-active")
+});
 
-    $(".hero").click(function(){
-        $('#hamburger-1').removeClass("is-active");
-        $('.drop-down-menu').removeClass("is-active")
-      });
+$(".c").click(function () {
+  let clas = $(this).attr('class');
+  console.log(clas);
+  let number;
+  if (clas === "c c1") { number = 1 }
+  else if (clas === "c c2") { number = 2 }
+  else if (clas === "c c3") { number = 3 }
+  $('.hero').css("background-image", `url(../images/header-slider-img-0${number}.jpg)`)
+  // $(this).
+});
 
-    $("#hamburger-1").click(function(){
-      $(this).toggleClass("is-active");
-      $('.drop-down-menu').toggleClass("is-active")
-    });
+background(1);
 
-    $(".c").click(function(){
-        let clas = $(this).attr('class');
-        console.log(clas);
-        let number;
-        if(clas==="c c1"){number = 1}
-        else if(clas==="c c2"){number = 2}
-        else if(clas==="c c3"){number = 3}
-        $('.hero').css("background-image",  `url(../images/header-slider-img-0${number}.jpg)`) 
-        // $(this).
+function background(x) {
+  setInterval(() => {
+    console.log('s');
+    if (x > 2) x = 0;
+    let backgroundA = document.querySelector('.hero');
+    let dots = document.querySelectorAll('.c');
+    dots.forEach((item, index) => {
+      // item.style.background = 'white';
+      // if(index==(x-1))item.style.background='blue';
+
+      const color = index === x ? '#429bd6' : "white";
+      item.style.background = color;
     })
-    
-  });
 
-  $(document).ready(function(){
-    
-    
-  });
-
-
-function background(x){
-    
-    
-    setInterval(()=>{
-        
-        console.log('s');
-        if(x>2)x=0;
-        let backgroundA = document.querySelector('.hero');
-        let dots = document.querySelectorAll('.c');
-        dots.forEach((item, index)=>{
-            // item.style.background = 'white';
-            // if(index==(x-1))item.style.background='blue';
-
-            const color = index === x ? '#429bd6':"white";
-            item.style.background = `${color}`;
-        })
-
-
-      
-        backgroundA.style.backgroundImage = `url(../images/header-slider-img-0${x+1}.jpg)`;
-        x++;
-    },3000)
-    
+    backgroundA.style.backgroundImage = `url(../images/header-slider-img-0${x + 1}.jpg)`;
+    x++;
+  }, 3000)
 }

@@ -4,45 +4,49 @@
 
 body,
 main a {
-    font-family: $body-font;
+  font-family: $body-font;
 }
 
 main a {
-    color: $text-color-dark;
+  color: $text-color-dark;
 }
 
 h1,
 h2,
 h3,
-nav a {
-    font-family: $heading-font;
+nav a,
+footer {
+  font-family: $heading-font;
 }
 
 h2 {
-    font-size: rem(24);
+  text-transform: uppercase;
+  font-size: rem(24);
+  font-weight: bold;
 }
 
 .heading {
-    font-family: $heading-font;
-    font-size: rem(24);
-    font-weight: bold;
+  text-transform: uppercase;
+  font-family: $heading-font;
+  font-size: rem(24);
+  font-weight: bold;
 }
 
 .mobile-hide {
-    display: none;
+  display: none;
 }
 
 @include mq($tabletPortrait) {
-    h2,
-    .heading {
-        font-size: rem(28);
-    }
+  h2,
+  .heading {
+    font-size: rem(28);
+  }
 
-    .mobile-show {
-        display: none;
-    }
+  .mobile-show {
+    display: none;
+  }
 
-    .mobile-hide {
-        display: block;
-    }
+  .mobile-hide {
+    display: block;
+  }
 }
