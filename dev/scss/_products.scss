@@ -31,11 +31,9 @@
 
 .products-list {
   list-style: none;
-  margin: rem(24) auto;
+  margin: rem(24) auto rem(34);
 
   li {
-    margin-bottom: 2rem;
-
     > a {
       width: 100%;
       display: grid;
@@ -43,7 +41,7 @@
       grid-template-rows: auto;
       justify-content: center;
       gap: rem(10);
-      margin: rem(10) 0;
+      margin: rem(14) 0;
       padding-bottom: rem(14);
       border-bottom: solid-border();
       text-decoration: none;
@@ -60,7 +58,8 @@
 
   .product-name {
     grid-column: 2 / 3;
-    font-size: rem(22);
+    font-size: rem(20);
+    line-height: rem(24);
     color: $text-color-dark;
     margin: auto 0;
   }
