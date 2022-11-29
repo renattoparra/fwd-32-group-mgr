@@ -63,7 +63,6 @@
       display: block;
       padding: 0.5rem;
       padding-right: 0rem;
-
       background-color: lightGrey;
       font-weight: 450;
       color: rgb(104, 104, 104);
@@ -72,6 +71,10 @@
       -moz-appearance: none;
       text-indent: 1px;
       text-overflow: "";
+
+      &.active {
+        background-color: #fff;
+      }
     }
 
     .select-wrapper {
@@ -80,15 +83,15 @@
 
     .select-wrapper::after {
       position: absolute;
-      top: 55%;
-      right: 3px;
+      top: 50%;
+      right: 10px;
       transform: translateY(-50%);
       content: "";
       width: 0;
       height: 0;
-      border-left: 10px solid transparent;
-      border-right: 10px solid transparent;
-      border-top: 10px solid grey;
+      border-left: 7px solid transparent;
+      border-right: 7px solid transparent;
+      border-top: 8px solid grey;
     }
   }
 
