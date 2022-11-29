@@ -20,7 +20,7 @@
     color: $text-color-light;
     font-family: $heading-font;
     text-align: center;
-    width: 69%;
+    width: em(192);
     font-weight: bold;
     margin: 0 auto;
     padding-top: 10rem;
@@ -89,7 +89,7 @@
   @include mq($tabletPortrait) {
     h1 {
       padding: 5rem $padding-side;
-      width: 70%;
+      width: em(300);
       margin: 0 auto;
     }
 
@@ -100,7 +100,7 @@
       margin: 0 auto;
 
       button {
-        background-color: rgba($color: #555555, $alpha: 0.7);
+        background-color: rgba($color: #2b2b2b, $alpha: 0.7);
         border: 0px solid rgba($color: #555555, $alpha: 0.7);
         border-radius: 0;
         padding: .5rem;

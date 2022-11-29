@@ -63,3 +63,92 @@
     }
   }
 }
+
+.contact-banners {
+  padding-bottom: 2rem;
+  background-color: $brand-color-dark;
+
+  a {
+    text-decoration: none;
+    border: 1px solid white;
+    padding: .4rem;
+    text-transform: uppercase;
+    font-weight: bolder;
+    font-size: .8rem;
+    margin-top: 7rem;
+  }
+
+  .contact-us {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    background-image: "images/map.jpg";
+    text-align: center;
+
+
+    h2,
+    a {
+      color: white;
+      margin-bottom: 2rem;
+    }
+
+
+  }
+
+  .install {
+    text-align: center;
+    background-image: url("../images/map.jpg");
+    background-position: right top;
+    background-size: cover;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+
+    h2,
+    a {
+      color: rgba($color: #2b2b2b, $alpha: 0.7);
+      margin-bottom: 2rem;
+    }
+
+    a {
+      // display: block;
+      border: 1px solid black;
+
+    }
+  }
+
+  @include mq($tabletPortrait) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 20rem;
+    padding-bottom: 0rem;
+
+    .install {
+      order: 1;
+    }
+
+    .install,
+    .contact-us {
+      padding-top: 5rem;
+
+      a {
+        background-color: $brand-color-light;
+        color: white;
+        border: none;
+        margin: none;
+        padding: .6rem;
+      }
+
+      h2 {
+
+        max-width: 302px;
+        margin: 0 auto;
+        margin-bottom: 1rem;
+      }
+
+    }
+
+
+
+  }
+
+
+}

@@ -20,8 +20,8 @@
   }
 
   @include mq($desktopMedium) {
-    top: -#{rem(80)};
-    height: rem(150);
+    top: -#{rem(100)};
+    height: rem(180);
     background-size: cover;
   }
 }
@@ -39,6 +39,7 @@
   &-form {
     background-color: $brand-color-dark;
     z-index: 1;
+    position: relative;
 
     &::before {
       @include wave("../images/wave-blue-dark.png");
