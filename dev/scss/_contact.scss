@@ -1,5 +1,6 @@
 @use "var" as *;
 @use "mixins" as *;
+@use "button" as *;
 
 .newsletter-wrapper {
   background-color: $brand-color-light2;
@@ -60,6 +61,71 @@
 
     input {
       padding: rem(2) rem(14);
+    }
+  }
+}
+
+.contact-banners {
+  padding-bottom: 2rem;
+  background-color: $brand-color-dark;
+
+  div {
+    text-align: center;
+    padding: 4rem 0;
+  }
+
+  .install {
+    background: url("../images/map.jpg") right top;
+    background-size: cover;
+
+    h2 {
+      color: #504f4f;
+      margin-bottom: 2rem;
+    }
+
+    a {
+      @include border-button($c: #504f4f, $ps: rem(12));
+    }
+  }
+
+  .contact-us {
+    h2 {
+      color: white;
+      margin-bottom: 2rem;
+    }
+
+    a {
+      @include border-button($c: #fff, $ps: rem(12));
+    }
+  }
+
+  @include mq($tabletPortrait) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 20rem;
+    padding-bottom: 0rem;
+
+    .install {
+      order: 1;
+    }
+
+    .install,
+    .contact-us {
+      padding-top: 5rem;
+
+      a {
+        background-color: $brand-color-light;
+        color: white;
+        border: none;
+        margin: none;
+        padding: 0.6rem;
+      }
+
+      h2 {
+        max-width: 302px;
+        margin: 0 auto;
+        margin-bottom: 1rem;
+      }
     }
   }
 }

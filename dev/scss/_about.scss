@@ -1,5 +1,6 @@
 @use "var" as *;
 @use "mixins" as *;
+@use "button" as *;
 
 .about {
   color: $text-color-light;
@@ -21,12 +22,7 @@
   }
 
   &-btn {
-    text-transform: uppercase;
-    font-weight: bold;
-    color: $text-color-light;
-    background-color: transparent;
-    border: solid-border($bc: $text-color-light);
-    padding: rem(10) rem(24);
+    @include border-button;
   }
 
   @include mq($tabletPortrait) {
@@ -49,10 +45,6 @@
     p {
       max-width: rem(600);
       font-size: rem(14);
-    }
-
-    &-btn {
-      padding: rem(10) rem(48);
     }
   }
 }

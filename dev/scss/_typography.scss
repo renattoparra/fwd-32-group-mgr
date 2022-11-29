@@ -37,6 +37,7 @@ h2 {
 }
 
 @include mq($tabletPortrait) {
+
   h2,
   .heading {
     font-size: rem(28);
@@ -48,5 +49,12 @@ h2 {
 
   .mobile-hide {
     display: block;
+  }
+}
+
+
+@include mq($desktopMedium) {
+  .mobile-tablet-show {
+    display: none;
   }
 }
