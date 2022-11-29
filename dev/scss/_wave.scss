@@ -8,7 +8,7 @@
   left: 0;
   right: 0;
   background-image: url(#{$bgUrl});
-  background-position: center center;
+  background-position: 20% center;
   background-size: 200% 100%;
   background-repeat: no-repeat;
   width: 100%;
@@ -16,13 +16,13 @@
   z-index: -1;
 
   @include mq($tabletPortrait) {
+    background-position: center center;
     background-size: contain;
   }
 
   @include mq($desktopMedium) {
     top: -#{rem(100)};
     height: rem(180);
-    background-size: cover;
   }
 }
 
