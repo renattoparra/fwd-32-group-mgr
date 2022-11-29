@@ -33,20 +33,24 @@
   list-style: none;
   margin: rem(24) auto;
 
-  li > a {
-    width: 100%;
-    display: grid;
-    grid-template-columns: 40% 40%;
-    grid-template-rows: auto;
-    justify-content: center;
-    gap: rem(10);
-    margin: rem(10) 0;
-    padding-bottom: rem(14);
-    border-bottom: border();
-    text-decoration: none;
+  li {
+    margin-bottom: 2rem;
 
-    &:last-child {
-      border: 0;
+    > a {
+      width: 100%;
+      display: grid;
+      grid-template-columns: 40% 40%;
+      grid-template-rows: auto;
+      justify-content: center;
+      gap: rem(10);
+      margin: rem(10) 0;
+      padding-bottom: rem(14);
+      border-bottom: solid-border();
+      text-decoration: none;
+    }
+
+    &:last-child a {
+      border-bottom: 0;
     }
   }
 
