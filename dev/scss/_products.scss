@@ -19,6 +19,8 @@
   }
 
   @include mq($tabletPortrait) {
+    padding: rem(48) $padding-side rem(100);
+
     h2 {
       color: $brand-color-dark;
     }
