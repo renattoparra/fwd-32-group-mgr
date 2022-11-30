@@ -22,10 +22,6 @@
     padding-top: 10rem;
   }
 
-  .btn-group {
-    display: none;
-  }
-
   .hero-buttons {
     @include flex-box();
     flex-direction: column;
@@ -71,20 +67,6 @@
       margin: 0 auto;
     }
 
-    .btn-group {
-      padding-top: 10rem;
-      display: flex;
-      width: 81%;
-      margin: 0 auto;
-
-      button {
-        background-color: rgba($color: #2b2b2b, $alpha: 0.7);
-        border: 0px solid rgba($color: #2b2b2b, $alpha: 0.7);
-        border-radius: 0;
-        padding: 0.5rem;
-      }
-    }
-
     .hero-buttons {
       height: 3rem;
       flex-direction: row;
@@ -101,16 +83,6 @@
     h1 {
       font-size: rem(64);
       max-width: rem(900);
-    }
-
-    .btn-group {
-      padding-top: 12rem;
-      margin: 0 auto;
-      // max-width: 900px;
-
-      button {
-        padding: 1.5rem 0.5rem;
-      }
     }
 
     .hero-buttons {

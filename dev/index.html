@@ -22,29 +22,30 @@
 </head>
 <body>
   <header>
-    <div class="mobile-wrapper">
-      <div id="desktop-header" class="mobile-hide" style="color:white">
-        <ul>
-          <li>Install Map</li>
-          <li>Product Literature</li>
-        </ul>
 
-        <ul>
-          <li>
-            <a class="contact-item" href="tel:+17126482755">
-              <img src="./images/icon-white-phone.png" alt="Phone Icon">
-              +1 712-648-2755
-            </a>
-          </li>
-          <li>
-            <a class="contact-item" href="mailto:test@test.com">
-              <img src="./images/icon-white-email.png" alt="Email Icon">
-              CONTACT US
-            </a>
-          </li>
-        </ul>
-      </div>
+    <div class="desktop-header mobile-hide" style="color:white">
+      <ul>
+        <li>Install Map</li>
+        <li>Product Literature</li>
+      </ul>
 
+      <ul>
+        <li>
+          <a class="contact-item" href="tel:+17126482755">
+            <img src="./images/icon-white-phone.png" alt="Phone Icon">
+            +1 712-648-2755
+          </a>
+        </li>
+        <li>
+          <a class="contact-item" href="mailto:test@test.com">
+            <img src="./images/icon-white-email.png" alt="Email Icon">
+            CONTACT US
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="mobile-header">
       <img class="logo" src="./images/logo-white-vulcan.svg" alt="Vulcan Logo">
 
       <div id="hamburger" class="mobile-show">
@@ -65,13 +66,9 @@
           <li><a href="#0">Product Literature</a></li>
         </ul>
       </div>
-
     </div>
 
-  </header>
-
-  <div class="hero">
-    <div class="btn-group" role="group" aria-label="Basic example">
+    <div class="desktop-menu mobile-hide btn-group" role="group">
       <button type="button" class="btn btn-secondary">About</button>
       <button type="button" class="btn btn-secondary">Products</button>
       <button type="button" class="btn btn-secondary">Services</button>
@@ -79,7 +76,9 @@
       <button type="button" class="btn btn-secondary">News</button>
       <button type="button" class="btn btn-secondary">Contact</button>
     </div>
+  </header>
 
+  <div class="hero">
     <h1>We design and fabricate indestructable wastewater screens. Enought said.</h1>
 
     <div class="hero-buttons">
