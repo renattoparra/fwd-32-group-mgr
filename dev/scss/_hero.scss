@@ -42,15 +42,13 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
-    // position: absolute;
-    // top: 33rem;
     left: 0;
     right: 0;
     padding-bottom: 7rem;
     padding-top: 4rem;
   }
 
-  .c {
+  .dot {
     width: 10px;
     height: 10px;
     transition: background-color 1s;
@@ -59,9 +57,9 @@
     line-height: 10px;
     margin: 0.5rem;
     border-radius: 50%;
-    background: white;
+    background: #fff;
 
-    &.c1 {
+    &-active {
       background: $brand-color-light;
     }
   }
