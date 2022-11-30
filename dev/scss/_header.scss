@@ -56,7 +56,7 @@ header {
     height: 18.5rem;
   }
 
-  #hamburger-1 .line {
+  #hamburger .line {
     width: 35px;
     height: 3px;
     background-color: #ecf0f1;
@@ -115,22 +115,22 @@ header {
   }
 }
 
-#hamburger-1:hover {
+#hamburger:hover {
   cursor: pointer;
 }
 
-#hamburger-1.is-active .line:nth-child(2) {
+#hamburger.is-active .line:nth-child(2) {
   opacity: 0;
 }
 
-#hamburger-1.is-active .line:nth-child(1) {
+#hamburger.is-active .line:nth-child(1) {
   -webkit-transform: translateY(6px) rotate(45deg);
   -ms-transform: translateY(6px) rotate(45deg);
   -o-transform: translateY(6px) rotate(45deg);
   transform: translateY(6px) rotate(45deg);
 }
 
-#hamburger-1.is-active .line:nth-child(3) {
+#hamburger.is-active .line:nth-child(3) {
   -webkit-transform: translateY(-10px) rotate(-45deg);
   -ms-transform: translateY(-10px) rotate(-45deg);
   -o-transform: translateY(-10px) rotate(-45deg);

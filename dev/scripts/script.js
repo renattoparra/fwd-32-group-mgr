@@ -1,9 +1,9 @@
 $(".hero").click(function () {
-  $('#hamburger-1').removeClass("is-active");
+  $('#hamburger').removeClass("is-active");
   $('.drop-down-menu').removeClass("is-active")
 });
 
-$("#hamburger-1").click(function () {
+$("#hamburger").click(function () {
   $(this).toggleClass("is-active");
   $('.drop-down-menu').toggleClass("is-active")
 });
@@ -16,7 +16,6 @@ $(".c").click(function () {
   else if (clas === "c c2") { number = 2 }
   else if (clas === "c c3") { number = 3 }
   $('.hero').css("background-image", `url(../images/header-slider-img-0${number}.jpg)`)
-  // $(this).
 });
 
 background(1);
