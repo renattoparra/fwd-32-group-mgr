@@ -23,7 +23,7 @@
 <body>
   <header>
     <div class="mobile-wrapper">
-      <section id="desktop-header" class="mobile-hide" style="color:white">
+      <div id="desktop-header" class="mobile-hide" style="color:white">
         <ul>
           <li>Install Map</li>
           <li>Product Literature</li>
@@ -33,18 +33,17 @@
           <li>
             <a class="contact-item" href="tel:+17126482755">
               <img src="./images/icon-white-phone.png" alt="Phone Icon">
-            +1 712-648-2755
+              +1 712-648-2755
             </a>
           </li>
-
           <li>
             <a class="contact-item" href="mailto:test@test.com">
               <img src="./images/icon-white-email.png" alt="Email Icon">
-            CONTACT US
+              CONTACT US
             </a>
           </li>
         </ul>
-      </section>
+      </div>
 
       <img class="logo" src="./images/logo-white-vulcan.svg" alt="Vulcan Logo">
 
@@ -54,25 +53,24 @@
         <span class="line"></span>
       </div>
 
-      <section class="drop-down-menu">
+      <div class="drop-down-menu">
         <ul>
-          <li class="mobile-show"><a href="0">About</a></li>
-          <li class="mobile-show"><a href="0">Products</a></li>
-          <li class="mobile-show"><a href="0">Services</a></li>
-          <li class="mobile-show"><a href="0">Parts</a></li>
-          <li class="mobile-show"><a href="0">News</a></li>
-          <li class="mobile-show"><a href="0">Contact</a></li>
-          <li><a href="0">Install Map</a></li>
-          <li><a href="0">Product Literature</a></li>
+          <li class="mobile-show"><a href="#0">About</a></li>
+          <li class="mobile-show"><a href="#0">Products</a></li>
+          <li class="mobile-show"><a href="#0">Services</a></li>
+          <li class="mobile-show"><a href="#0">Parts</a></li>
+          <li class="mobile-show"><a href="#0">News</a></li>
+          <li class="mobile-show"><a href="#0">Contact</a></li>
+          <li><a href="#0">Install Map</a></li>
+          <li><a href="#0">Product Literature</a></li>
         </ul>
-      </section>
+      </div>
 
     </div>
 
   </header>
 
   <div class="hero">
-    <!-- <div class="slideshow" src="./images/header-slider-img-01.jpg" alt="industrial wlakway"></div> -->
     <div class="btn-group" role="group" aria-label="Basic example">
       <button type="button" class="btn btn-secondary">About</button>
       <button type="button" class="btn btn-secondary">Products</button>
@@ -154,9 +152,10 @@
       <h2>Product Advisor</h2>
       <h3>Find your project's perfect fit.</h3>
 
-      <form action="/" class="form-section" method="post">
+      <form action="/" method="post" class="form-section">
         <fieldset>
           <div class="form-group product-advisor-group">
+
             <div class="form-row product">
               <label for="product">Product Type</label>
               <div class="select-wrapper">
@@ -168,55 +167,67 @@
                   <option value="#">Lorem</option>
                 </select>
               </div>
+            </div>
 
-
-            </div><!-- end form-row -->
             <div class="form-row screen-location-group">
               <label for="location">Screen Location</label>
-              <div class="select-wrapper"><select name="location" id="location">
+              <div class="select-wrapper">
+                <select name="location" id="location">
                   <option value="Select">Select</option>
                   <option value="#">Lorem</option>
                   <option value="#">Lorem</option>
                   <option value="#">Lorem</option>
                   <option value="#">Lorem</option>
-                </select></div>
-            </div><!-- end form-row -->
+                </select>
+              </div>
+            </div>
+
             <div class="form-row flow-type-group">
               <label for="year">Flow Type</label>
-              <div class="select-wrapper"><select name="year" id="year">
+              <div class="select-wrapper">
+                <select name="year" id="year">
                   <option value="Select">Select</option>
                   <option value="#">Lorem</option>
                   <option value="#">Lorem</option>
                   <option value="#">Lorem</option>
                   <option value="#">Lorem</option>
-                </select></div>
+                </select>
+              </div>
             </div>
+
             <div class="form-row channel-depth-group">
               <label for="depth">Channel Depth</label>
-              <div class="select-wrapper"><select name="depth" id="depth">
+              <div class="select-wrapper">
+                <select name="depth" id="depth">
                   <option value="Select">Select</option>
                   <option value="#">Lorem</option>
                   <option value="#">Lorem</option>
                   <option value="#">Lorem</option>
                   <option value="#">Lorem</option>
-                </select></div>
+                </select>
+              </div>
             </div>
+
             <div class="form-row channel-width-group">
               <label for="width">Channel Width</label>
-              <div class="select-wrapper"><select name="width" id="width">
+              <div class="select-wrapper">
+                <select name="width" id="width">
                   <option value="Select">Select</option>
                   <option value="#">Lorem</option>
                   <option value="#">Lorem</option>
                   <option value="#">Lorem</option>
                   <option value="#">Lorem</option>
-                </select></div>
+                </select>
+              </div>
             </div>
-          </div><!-- end form-group -->
+
+          </div>
         </fieldset>
 
         <div class="form-row submit">
           <input type="submit" value="Find My Product">
         </div>
+
       </form>
     </section>
 
@@ -255,16 +266,14 @@
           <h2>Ready to Spec<br class="mobile-tablet-show" /> Vulcan <br class="mobile-tablet-show" />for your project?</h2>
           <a href="">Contact Us</a>
         </div>
-
-
       </div>
-
 
     </section>
 
     <footer class="site-footer wave wave-footer">
 
       <div class="footer-wrapper">
+
         <a class="logo" href="#0">
           <img src="./images/logo-white-vulcan.svg" alt="Vulcan Logo">
         </a>
@@ -292,7 +301,9 @@
         </div>
 
         <p class="copyright">copyright 2017. all rights reserved</p>
+
       </div>
+
     </footer>
 
 
