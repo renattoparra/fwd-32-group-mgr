@@ -13,10 +13,10 @@
 }
 
 // Center elements in a flex
-@mixin flex-box($jc: center) {
+@mixin flex-box($jc: center, $ai: center) {
   display: flex;
   justify-content: $jc;
-  align-items: center;
+  align-items: $ai;
 }
 
 // Mixin for centering element
